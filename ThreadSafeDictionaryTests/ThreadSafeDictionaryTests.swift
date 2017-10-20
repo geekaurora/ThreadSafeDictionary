@@ -10,7 +10,7 @@ import XCTest
 @testable import ThreadSafeDictionary
 
 class TestThreadSafeDictionary: XCTestCase {
-    fileprivate static let queueLabel = "com.tony.test,threadSafeDictionary"
+    fileprivate static let queueLabel = "com.tony.test.threadSafeDictionary"
     
     fileprivate var originalDict: [Int: Int] = {
         var originalDict = [Int: Int]()

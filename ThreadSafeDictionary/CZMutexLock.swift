@@ -16,7 +16,7 @@ public class CZMutexLock<Item>: NSObject {
         self.item = item
     }
     
-    /// Execute `block` with read lock which protects `item`
+    /// Execute `block` with read lock that protects `item`
     @discardableResult
     public func readLock<Result>(_ block: @escaping (_ item: Item) -> Result?) -> Result? {
         return lock.readLock { [weak self] in
@@ -28,7 +28,7 @@ public class CZMutexLock<Item>: NSObject {
         }
     }
     
-    /// Execute `block` with write lock which protects `item`
+    /// Execute `block` with write lock that protects `item`
     @discardableResult
     public func writeLock<Result>(_ block: @escaping (_ item: inout Item) -> Result?) -> Result? {
         return lock.writeLock { [weak self] in
